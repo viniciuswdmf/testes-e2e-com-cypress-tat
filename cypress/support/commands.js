@@ -10,14 +10,16 @@ Cypress.Commands.add('fillSignupFormAndSubmit', (email, password) => {
 Cypress.Commands.add('login', (
 //   username = Cypress.env('USER_EMAIL'),
 //   password = Cypress.env('USER_PASSWORD'),
+    username = 'gaxinoc800@appxapi.com',
+    password = 'S%3emanudx',
   { cacheSession = true } = {}
 ) => {
   const login = () => {
     cy.visit('/login')
     // cy.get('#email').type(username)
     // cy.get('#password').type(password, { log: false })
-    cy.get('#email').type('gaxinoc800@appxapi.com')
-    cy.get('#password').type('S%3emanudx', { log: false })
+    cy.get('#email').type(username)
+    cy.get('#password').type(password, { log: false })
     cy.contains('button', 'Login').click()
     cy.wait(8000)
     cy.contains('h1', 'Your Notes').should('be.visible')
