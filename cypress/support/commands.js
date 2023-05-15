@@ -77,7 +77,7 @@ Cypress.Commands.add('fillSettingsFormAndSubmit', () => {
   cy.iframe('.card-field iframe')
     .as('iframe')
     .find('[name="cardnumber"]')
-    .type('4242424242424242')
+    .type('4242424242434242')
   cy.get('@iframe')
     .find('[name="exp-date"]')
     .type('1271')
