@@ -1,5 +1,5 @@
 // cypress/integration/signup.spec.js
-
+/// <reference path="../support/commands.d.ts" />
 it('successfully signs up using confirmation code sent via email', () => {
   const faker = require('faker')
   const emailAddress = `${faker.datatype.uuid()}@${Cypress.env('MAILOSAUR_SERVER_ID')}.mailosaur.net`
