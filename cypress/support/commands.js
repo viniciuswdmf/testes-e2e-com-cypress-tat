@@ -87,6 +87,6 @@ Cypress.Commands.add('fillSettingsFormAndSubmit', () => {
   cy.get('@iframe')
     .find('[name="postal"]')
     .type('12345')
-  cy.contains('button', 'Purchase').click()
+  cy.contains('button', 'Purchase', {force: true}).click()
 })
 
