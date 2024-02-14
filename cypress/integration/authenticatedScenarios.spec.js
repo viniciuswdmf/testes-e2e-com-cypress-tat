@@ -1,6 +1,6 @@
 /// <reference path="../support/commands.d.ts" />
 
-describe('Scenarios where authentication is aa pre-requirement', () => {
+describe('Scenarios where authentication is aa pre-requirements', () => {
     beforeEach(() => {
         cy.intercept('GET', '**/notes').as('getNotes')
         cy.login()
