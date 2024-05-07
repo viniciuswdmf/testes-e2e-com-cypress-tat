@@ -1,46 +1,44 @@
 # Testes _end-to-end_ com Cypress
 
-Sample project to demonstrate end-to-end (e2e) tests written with Cypress running on a CI service.
+Projeto simples para rodar o cypress em um serviço CI(GitHubActions)
 
-## Pre-requirements
+## Pre-requisitos
 
-To run this project, you will need:
+Pra executar, será necessário:
 
-- [git](https://git-scm.com/downloads) (I've used version `2.26.2` while writing this doc)
-- [nodejs](https://nodejs.org/en/) (I've used version `14.17.3` while writing this doc)
-- NPM (I've used version `6.14.13` while writing this doc)
-- [Google Chrome](https://www.google.com/intl/en_us/chrome/) (I've used version `92.0.4515.131` while writing this doc)
+- [git](https://git-scm.com/downloads) (Versão usada: `2.26.2` )
+- [nodejs](https://nodejs.org/en/) (Versão usada: `14.17.3` )
+- NPM (Versão usada: `6.14.13` )
+- [Google Chrome](https://www.google.com/intl/en_us/chrome/) (Versão usada: `92.0.4515.131` )
 
-**Note:** When installing nodejs, NPM is automatically installed too.
+## Instalação
 
-## Installation
+Para instalar, rode `npm install` (ou npm i)
 
-To install the dev dependencies, run `npm install` (or `npm i` for short.)
+## Configurando as variáveis de ambiente
 
-## Configuring the environment variables
+Antes de rodar, precisamos configurar algumas variáveis de ambiente.
 
-Before running the tests, some environment variables need to be set up.
+Copie o arquivo [`cypress.env.example.json`](./cypress.env.example.json) renomeando para `cypress.env.json`, e defina o valor apropriado para cada variável.
 
-Make a copy of the [`cypress.env.example.json`](./cypress.env.example.json) file as `cypress.env.json`, and set the appropriate values for all the variables.
+**Nota:** `cypress.env.json` nao é rastreado pelo git.
 
-**Note:** `cypress.env.json` file is not tracked by git.
+## Executando os testes
 
-## Running the tests
+Nesse projeto, podemos executar os testes no modo interativo ou no modo headless, e nos dispositivos
+desktop e tablet.
 
-In this project, you can run tests in interactive and headless modes, and on desktop and tablet viewports.
+### Modo Headless 
 
-### Headless mode
+Rode `npm test` (`npm t`) para executar os testes em modo headless e na visão desktop.
 
-Run `npm test` (or `npm t` for short) to run all tests in headless mode using a desktop viewport.
+Rode `npm run test:tablet` para executar os testes na visão do tablet.
 
-Run `npm run test:tablet` to run the appropriate tests in headless mode using a tablet viewport.
+### Modo interativo
 
-### Interactive mode
+Rode `npm run cy:open` para abrir o Test Runner do Cypress e visualizar os testes em desktop
 
-Run `npm run cy:open` to open the Cypress Test Runner to run tests in interactive mode using a desktop viewport.
-
-Run `npm run cy:open:tablet` to open the Cypress Test Runner to run tests in interactive mode using a tablet viewport.
+Rode `npm run cy:open:tablet` para abrir o Test Runner do Cypress e visualizar os testes no tablet
 
 ___
 
-Made with ❤️ by [your-name-here](https://your-web-site-or-github-profile-here).
